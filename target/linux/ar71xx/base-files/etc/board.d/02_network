@@ -275,6 +275,7 @@ ar71xx_setup_interfaces()
 	smart-300|\
 	tl-mr3420-v2|\
 	tl-wdr6500-v2|\
+	tl-wdr6500-v6|\
 	tl-wr841n-v8|\
 	tl-wr940n-v4|\
 	tl-wr941nd-v5|\
