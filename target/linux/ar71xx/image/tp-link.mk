@@ -233,6 +233,19 @@ $(Device/tplink-8mlzma)
 endef
 TARGET_DEVICES += tl-wdr6500-v2
 
+define Device/tl-wdr6500-v6
+$(Device/tplink-8mlzma)
+  DEVICE_TITLE := TP-LINK TL-WDR6500 v6
+  DEVICE_PACKAGES := kmod-ath10k ath10k-firmware-qca9888
+  KERNEL := kernel-bin | patch-cmdline | lzma | uImage lzma
+  KERNEL_INITRAMFS := kernel-bin | patch-cmdline | lzma | uImage lzma | tplink-v1-header
+  BOARDNAME = TL-WDR6500-v6
+  DEVICE_PROFILE = TLWDR6500V6
+  TPLINK_HWID := 0x65000006
+  TPLINK_HEADER_VERSION := 2
+endef
+TARGET_DEVICES += tl-wdr6500-v6
+
 define Device/tl-wdr3320-v2
 $(Device/tplink-4mlzma)
   DEVICE_TITLE := TP-LINK TL-WDR3320v2
